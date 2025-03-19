@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Herança em JavaScript</title>
+</head>
+<body>
+<main>
+    <div class="container">
+        <h1>Meu Carro Interativo</h1>
+
+        <h2>Carro</h2>
+        <div id="carro-container">
+            <img id="carro-imagem" src="imagens/civic-removebg-preview.png" alt="Imagem do Carro">
+            <p id="carro-status">Desligado</p>
+            <p id="carro-velocidade">Velocidade: <span id="velocidade-valor">0</span> km/h</p>
+            <p id="carro-detalhes">Modelo: <span id="modelo"></span>, Cor: <span id="cor"></span></p>
+        </div>
+
+        <div class="botoes">
+            <button onclick="garagem.interagirComVeiculo('meuCarro', 'ligar')">Ligar</button>
+            <button onclick="garagem.interagirComVeiculo('meuCarro', 'desligar')">Desligar</button>
+            <button onclick="garagem.interagirComVeiculo('meuCarro', 'acelerar')">Acelerar</button>
+            <button onclick="garagem.interagirComVeiculo('meuCarro', 'frear')">Frear</button>
+            <input type="text" id="corPintura" placeholder="Cor da Pintura">
+            <button onclick="garagem.pintarVeiculo('meuCarro')">Pintar</button>
+            <input type="number" id="combustivel" placeholder="Combustível">
+            <button onclick="garagem.abastecerVeiculo('meuCarro')">Abastecer</button>
+        </div>
+    </div>
+
+    <h1>Herança em JavaScript</h1>
+
+    <h2>Carro Esportivo</h2>
+    <img src="imagens/paganiRosa-removebg-preview.png">
+    <input type="text" id="modeloEsportivo" placeholder="Modelo">
+    <input type="text" id="corEsportivo" placeholder="Cor">
+    <button onclick="garagem.criarCarroEsportivo()">Criar Carro Esportivo</button>
+    <div id="botoes-carro-esportivo" class="botoes">
+        <button onclick="garagem.interagirComVeiculo('carroEsportivo', 'ligar')">Ligar</button>
+        <button onclick="garagem.interagirComVeiculo('carroEsportivo', 'desligar')">Desligar</button>
+        <button onclick="garagem.interagirComVeiculo('carroEsportivo', 'acelerar')">Acelerar</button>
+        <button onclick="garagem.interagirComVeiculo('carroEsportivo', 'frear')">Frear</button>
+        <button onclick="garagem.interagirComVeiculo('carroEsportivo', 'ativarTurbo')">Ativar Turbo</button>
+        <button onclick="garagem.interagirComVeiculo('carroEsportivo', 'desativarTurbo')">Desativar Turbo</button>
+        <input type="text" id="corPinturaEsportivo" placeholder="Cor da Pintura">
+        <button onclick="garagem.pintarVeiculo('carroEsportivo')">Pintar</button>
+        <input type="number" id="combustivelEsportivo" placeholder="Combustível">
+        <button onclick="garagem.abastecerVeiculo('carroEsportivo')">Abastecer</button>
+    </div>
+    <p id="infoEsportivo"></p>
+
+    <h2>Caminhão</h2>
+    <img src="imagens/caminhão-removebg-preview.png">
+    <input type="text" id="modeloCaminhao" placeholder="Modelo">
+    <input type="text" id="corCaminhao" placeholder="Cor">
+    <input type="number" id="capacidadeCarga" placeholder="Capacidade de Carga">
+    <button onclick="garagem.criarCaminhao()">Criar Caminhão</button>
+    <div id="botoes-caminhao" class="botoes">
+        <button onclick="garagem.interagirComVeiculo('caminhao', 'ligar')">Ligar</button>
+        <button onclick="garagem.interagirComVeiculo('caminhao', 'desligar')">Desligar</button>
+        <button onclick="garagem.interagirComVeiculo('caminhao', 'acelerar')">Acelerar</button>
+        <button onclick="garagem.interagirComVeiculo('caminhao', 'frear')">Frear</button>
+        <input type="number" id="pesoCarga" placeholder="Peso da Carga">
+        <button onclick="garagem.interagirComVeiculo('caminhao', 'carregar')">Carregar</button>
+        <input type="number" id="pesoDescarga" placeholder="Peso para descarregar">
+        <button onclick="garagem.interagirComVeiculo('caminhao', 'descarregar')">Descarregar</button>
+         <input type="text" id="corPinturaCaminhao" placeholder="Cor da Pintura">
+        <button onclick="garagem.pintarVeiculo('caminhao')">Pintar</button>
+        <input type="number" id="combustivelCaminhao" placeholder="Combustível">
+        <button onclick="garagem.abastecerVeiculo('caminhao')">Abastecer</button>
+    </div>
+    <p id="infoCaminhao"></p>
+    
+    <h2>Moto</h2>
+    <img src="imagens/kawasaki-Photoroom.png">
+    <input type="text" id="modeloMoto" placeholder="Modelo">
+    <input type="text" id="corMoto" placeholder="Cor">
+    <button onclick="garagem.criarMoto()">Criar Moto</button>
+    <div id="botoes-moto" class="botoes">
+        <button onclick="garagem.interagirComVeiculo('moto', 'ligar')">Ligar</button>
+        <button onclick="garagem.interagirComVeiculo('moto', 'desligar')">Desligar</button>
+        <button onclick="garagem.interagirComVeiculo('moto', 'acelerar')">Acelerar</button>
+        <button onclick="garagem.interagirComVeiculo('moto', 'frear')">Frear</button>
+        <input type="text" id="corPinturaMoto" placeholder="Cor da Pintura">
+        <button onclick="garagem.pintarVeiculo('moto')">Pintar</button>
+        <input type="number" id="combustivelMoto" placeholder="Combustível">
+        <button onclick="garagem.abastecerVeiculo('moto')">Abastecer</button>
+    </div>
+    <p id="infoMoto"></p>
+
+    <h2>Bicicleta</h2>
+    <img src="imagens/bicicleta-rosa-Photoroom.png">
+    <input type="text" id="modeloBicicleta" placeholder="Modelo">
+    <input type="text" id="corBicicleta" placeholder="Cor">
+    <button onclick="garagem.criarBicicleta()">Criar Bicicleta</button>
+    <div id="botoes-bicicleta" class="botoes">
+        <input type="text" id="corPinturaBicicleta" placeholder="Cor da Pintura">
+        <button onclick="garagem.pintarVeiculo('bicicleta')">Pintar</button>
+    </div>
+    <p id="infoBicicleta"></p>
+
+    <h2>Exibir Informações do Veículo</h2>
+    <div class="botoes">
+        <button onclick="garagem.exibirInformacoes('meuCarro')">Exibir Carro</button>
+        <button onclick="garagem.exibirInformacoes('carroEsportivo')">Exibir Carro Esportivo</button>
+        <button onclick="garagem.exibirInformacoes('caminhao')">Exibir Caminhão</button>
+        <button onclick="garagem.exibirInformacoes('moto')">Exibir Moto</button>
+        <button onclick="garagem.exibirInformacoes('bicicleta')">Exibir Bicicleta</button>
+    </div>
+    <div id="informacoesVeiculo"></div>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>

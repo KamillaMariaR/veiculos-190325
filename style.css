@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  input[type="text"], input[type="number"] {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  main{
+    background-color: rgb(250, 233, 248);
+    width: 70%;
+    margin: auto;
+    border: 2px solid #af09a1;
+    border-radius: 30px;
+  
+  }
+  img{
+    width: 500px;
+
+  }
+  h1{
+    color: #af09a1;
+    font-size:45px;
+  }
+  
